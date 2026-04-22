@@ -17,8 +17,8 @@ class Settings(BaseSettings):
     BYPASS_AUTH: bool = str(os.getenv("BYPASS_AUTH", "false")).lower() == "true"
 
     # CORS & Security
-    # ALLOWED_ORIGINS: list =  str(os.getenv("ALLOWED_ORIGINS", "http://localhost:5173,http://localhost:4173,http://consultalattes.fapemig.br,https://consultalattes.fapemig.br")).split(",")
-    # FRONTEND_URL: str = os.getenv("FRONTEND_URL", "http://consultalattes.fapemig.br")
+    ALLOWED_ORIGINS: list =  str(os.getenv("ALLOWED_ORIGINS", "http://localhost:5173,http://localhost:4173,http://consultalattes.fapemig.br,https://consultalattes.fapemig.br")).split(",")
+    FRONTEND_URL: str = os.getenv("FRONTEND_URL", "http://consultalattes.fapemig.br")
 
     class Config:
         env_file = ".env"
